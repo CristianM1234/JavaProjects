@@ -1,20 +1,18 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
-package bank;
+public class Bank{
+  private CheckingAccount accountOne;
+  private CheckingAccount accountTwo;
 
-/**
- *
- * @author Estudiantes
- */
-public class Bank {
+  public Bank(){
+    accountOne = new CheckingAccount("Zeus", 100, "1");
+    accountTwo = new CheckingAccount("Hades", 200, "2");
+  }
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
-    }
-    
+  public static void main(String[] args){
+    Bank bankOfGods = new Bank();
+    System.out.println(bankOfGods.accountOne.name);
+    bankOfGods.accountOne.addFunds(5);
+    bankOfGods.accountOne.getInfo();
+
+  }
+
 }
